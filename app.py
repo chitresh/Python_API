@@ -70,8 +70,9 @@ class User(Resource):
 		return user, 201
 		
 		
-		api.add_resource(user, "/user/<string:name>")
-		app.run(debug=True)
+api.add_resource(User, "/user/<string:name>")
+		
+app.run(host='localhost', port=5000)
 	
 
 	
